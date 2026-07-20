@@ -462,7 +462,7 @@
     }
     statusEl.textContent = 'Memuat daftar kelas & siswa dari spreadsheet...';
     try{
-      const res = await fetch(SCRIPT_URL, { method: 'GET' });
+      const res = await fetch(SCRIPT_URL + '?type=siswa', { method: 'GET' });
       const data = await res.json();
       const kelasBaru = Object.keys(data);
       if(kelasBaru.length === 0){
